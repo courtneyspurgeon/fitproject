@@ -1,0 +1,29 @@
+<h1>Listing pants</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Style</th>
+    <th>Brand</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pants.each do |pant| %>
+  <tr>
+    <td><%= pant.name %></td>
+    <td><%= pant.size %></td>
+    <td><%= pant.style_id %></td>
+    <td><%= pant.brand_id %></td>
+    <td><%= link_to 'Show', pant %></td>
+    <td><%= link_to 'Edit', edit_pant_path(pant) %></td>
+    <td><%= link_to 'Destroy', pant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pant', new_pant_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hip_fit: 1
+  waist_fit: 1
+  thigh_fit: 1
+
+two:
+  hip_fit: 1
+  waist_fit: 1
+  thigh_fit: 1

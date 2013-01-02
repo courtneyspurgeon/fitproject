@@ -1,0 +1,29 @@
+<%= form_for(@fit_profile) do |f| %>
+  <% if @fit_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fit_profile.errors.count, "error") %> prohibited this fit_profile from being saved:</h2>
+
+      <ul>
+      <% @fit_profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hip_fit %><br />
+    <%= f.number_field :hip_fit %>
+  </div>
+  <div class="field">
+    <%= f.label :waist_fit %><br />
+    <%= f.number_field :waist_fit %>
+  </div>
+  <div class="field">
+    <%= f.label :thigh_fit %><br />
+    <%= f.number_field :thigh_fit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing fit_profiles</h1>
+
+<table>
+  <tr>
+    <th>Hip fit</th>
+    <th>Waist fit</th>
+    <th>Thigh fit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fit_profiles.each do |fit_profile| %>
+  <tr>
+    <td><%= fit_profile.hip_fit %></td>
+    <td><%= fit_profile.waist_fit %></td>
+    <td><%= fit_profile.thigh_fit %></td>
+    <td><%= link_to 'Show', fit_profile %></td>
+    <td><%= link_to 'Edit', edit_fit_profile_path(fit_profile) %></td>
+    <td><%= link_to 'Destroy', fit_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fit profile', new_fit_profile_path %>

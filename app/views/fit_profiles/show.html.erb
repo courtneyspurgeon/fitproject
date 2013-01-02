@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hip fit:</b>
+  <%= @fit_profile.hip_fit %>
+</p>
+
+<p>
+  <b>Waist fit:</b>
+  <%= @fit_profile.waist_fit %>
+</p>
+
+<p>
+  <b>Thigh fit:</b>
+  <%= @fit_profile.thigh_fit %>
+</p>
+
+
+<%= link_to 'Edit', edit_fit_profile_path(@fit_profile) %> |
+<%= link_to 'Back', fit_profiles_path %>
