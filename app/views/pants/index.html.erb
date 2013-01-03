@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Size</th>
     <th>Style</th>
     <th>Brand</th>
     <th></th>
@@ -13,11 +12,9 @@
 
 <% @pants.each do |pant| %>
   <tr>
-    <td><%= pant.name %></td>
-    <td><%= pant.size %></td>
-    <td><%= pant.style_id %></td>
-    <td><%= pant.brand_id %></td>
-    <td><%= link_to 'Show', pant %></td>
+    <td><%= link_to pant.name, pant %></td>
+    <td><%= pant.style %></td>
+    <td><%= pant.brand.name %></td>
     <td><%= link_to 'Edit', edit_pant_path(pant) %></td>
     <td><%= link_to 'Destroy', pant, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

@@ -5,6 +5,7 @@ class CreateFitProfiles < ActiveRecord::Migration
       t.integer :waist_fit
       t.integer :thigh_fit
       t.integer :pant_id
+      t.integer :size
 
       t.timestamps
     end

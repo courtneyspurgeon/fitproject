@@ -15,17 +15,16 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
-    <%= f.label :size %><br />
-    <%= f.number_field :size %>
+
+    <%= f.label :style %><br />
+    <%= f.select :style, options_for_select(Pant::STYLES) %>
   </div>
-  <div class="field">
-    <%= f.label :style_id %><br />
-    <%= f.number_field :style_id %>
-  </div>
+  
   <div class="field">
     <%= f.label :brand_id %><br />
-    <%= f.number_field :brand_id %>
+    <%= f.select :brand_id, Brand.all.collect {|b| [ b.name, b.id ] }, {:include_blank => 'None'} %>
   </div>
   <div class="actions">
     <%= f.submit %>

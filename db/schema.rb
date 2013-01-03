@@ -23,21 +23,15 @@ ActiveRecord::Schema.define(:version => 20130102045922) do
     t.integer  "waist_fit"
     t.integer  "thigh_fit"
     t.integer  "pant_id"
+    t.integer  "size"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "pants", :force => true do |t|
     t.string   "name"
-    t.integer  "size"
-    t.integer  "style_id"
+    t.string   "style"
     t.integer  "brand_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "styles", :force => true do |t|
-    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

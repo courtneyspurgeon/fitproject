@@ -1,14 +1,24 @@
 /* Structure Layout */
 @import 'shared';
 
+body {
+  background: $color_4;
+}
 header {
   display: block;
   margin: auto;
   width: $content_width;
   padding: 20px;
+  background: $color_3;
+  border: 1px solid $color_1;
+  border-width: 0px 5px;
+  color: white;
 } /* end header */
-
-#content_wrapper {
-  width: $content_width;
-  margin: auto;
-}
+#main_wrapper {
+  #content_wrapper {
+    width: $content_width;
+    background: $neutral_bg;
+    padding: 20px;
+    margin: auto;
+  } /* content_wrapper */
+} /* end main_wrapper */
