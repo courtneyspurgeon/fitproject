@@ -10,6 +10,7 @@ class Pant < ActiveRecord::Base
     'relaxed_fit'
   ]
 
+  validates :name, :style, :brand_id, :presence => true
   validates :style, :inclusion => { :in => STYLES,
     :message => "%{value} is not a valid style" }
 

@@ -13,16 +13,27 @@
 
   <div class="field">
     <%= f.label :hip_fit %><br />
-    <%= f.number_field :hip_fit %>
+    <%= f.text_field :hip_fit %>
   </div>
   <div class="field">
     <%= f.label :waist_fit %><br />
-    <%= f.number_field :waist_fit %>
+    <%= f.text_field :waist_fit %>
   </div>
   <div class="field">
     <%= f.label :thigh_fit %><br />
-    <%= f.number_field :thigh_fit %>
+    <%= f.text_field :thigh_fit %>
   </div>
+
+  <div class="field">
+    <%= f.label :pant_id %><br />
+    <%= f.select :pant_id, Pant.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'Select'} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.select :size, options_for_select(FitProfile::SIZES), {:include_blank => 'Select'} %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
